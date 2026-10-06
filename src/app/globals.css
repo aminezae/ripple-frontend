@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --theme-primary: #5B3A78;
+  --theme-primary-button: #5B3A78;
+  --theme-secondary: #E8734A;
+  --theme-bg: #FAFAF8;
+  --theme-sidebar: #FFFFFF;
+  --theme-surface: #FFFFFF;
+  --theme-hover: rgba(0, 0, 0, 0.05);
+  --theme-border: #E5E3DE;
+  --theme-text: #1A1A1A;
+  --theme-text-muted: #6B7280;
+}
+
+.dark {
+  --theme-primary: #9B7FC7;
+  --theme-primary-button: #9333ea;
+  --theme-secondary: #E8734A;
+  --theme-bg: #0b0d13;
+  --theme-sidebar: #11141d;
+  --theme-surface: #171b26;
+  --theme-hover: #1e2332;
+  --theme-border: rgba(255, 255, 255, 0.08);
+  --theme-text: #EDEDED;
+  --theme-text-muted: #9CA3AF;
+}
+
+@theme {
+  --color-primary: var(--theme-primary);
+  --color-primary-button: var(--theme-primary-button);
+  --color-secondary: var(--theme-secondary);
+  --color-background: var(--theme-bg);
+  --color-sidebar: var(--theme-sidebar);
+  --color-surface: var(--theme-surface);
+  --color-hover: var(--theme-hover);
+  --color-border: var(--theme-border);
+  --color-text: var(--theme-text);
+  --color-text-muted: var(--theme-text-muted);
+  --font-sans: var(--font-manrope), sans-serif;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
